@@ -1,5 +1,6 @@
 // API endpoint (change this to your server address)
-const API_BASE_URL = 'http://localhost:3000/api';
+//const API_BASE_URL = 'http://localhost:3000/api';
+const API_BASE_URL = '/api';
 
 // DOM Elements
 const eventsContainer = document.getElementById('events-container');
