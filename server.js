@@ -76,7 +76,7 @@ app.post('/api/purchase', (req, res) => {
   
   // Simulate more intensive processing
   let total = 0;
-  for (let i = 0; i < 5000000; i++) {
+  for (let i = 0; i < 6000000; i++) {
     total += Math.random();
   }
   
