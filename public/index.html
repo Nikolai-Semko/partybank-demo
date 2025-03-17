@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partybank - Event Tickets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Partybank</h1>
+            <p>Your one-stop platform for event tickets</p>
+        </header>
+
+        <section class="events-section">
+            <h2>Upcoming Events</h2>
+            <div id="events-container" class="events-grid">
+                <!-- Events will be loaded here dynamically -->
+                <div class="loading">Loading events...</div>
+            </div>
+        </section>
+
+        <section id="event-details" class="event-details hidden">
+            <button id="back-button" class="back-button">← Back to events</button>
+            <h2 id="event-name">Event Name</h2>
+            <div class="details-container">
+                <div class="price-availability">
+                    <p>Price: $<span id="event-price">0</span></p>
+                    <p>Available: <span id="availability-status">Yes</span></p>
+                </div>
+                <div class="purchase-form">
+                    <label for="quantity">Number of tickets:</label>
+                    <input type="number" id="quantity" min="1" max="10" value="1">
+                    <button id="purchase-button" class="purchase-button">Purchase Tickets</button>
+                </div>
+            </div>
+            <div id="purchase-result" class="purchase-result hidden">
+                <!-- Purchase confirmation will appear here -->
+            </div>
+        </section>
+
+        <section id="demo-controls" class="demo-controls">
+            <h2>Load Testing Controls</h2>
+            <div class="control-panel">
+                <div class="control-group">
+                    <label for="concurrent-users">Concurrent Users:</label>
+                    <input type="number" id="concurrent-users" min="1" max="100" value="10">
+                </div>
+                <div class="control-group">
+                    <label for="request-interval">Request Interval (ms):</label>
+                    <input type="number" id="request-interval" min="10" max="5000" value="500">
+                </div>
+                <div class="control-group buttons">
+                    <button id="start-load-test" class="test-button start">Start Load Test</button>
+                    <button id="stop-load-test" class="test-button stop" disabled>Stop Test</button>
+                </div>
+            </div>
+            <div class="metrics">
+                <div class="metric-card">
+                    <h3>Requests Sent</h3>
+                    <div id="requests-count" class="metric-value">0</div>
+                </div>
+                <div class="metric-card">
+                    <h3>Success Rate</h3>
+                    <div id="success-rate" class="metric-value">0%</div>
+                </div>
+                <div class="metric-card">
+                    <h3>Avg Response Time</h3>
+                    <div id="avg-response-time" class="metric-value">0 ms</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
