@@ -1,12 +1,17 @@
 // server.js - Main backend file for Partybank demo application
 const express = require('express');
 const cors = require('cors');
+
 const os = require('os');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(cors());
+// Ensure proper CORS configuration
+app.use(cors({
+  origin: '*', // For testing only - restrict to your actual domain in production
+  methods: ['GET', 'POST']
+}));
 app.use(express.json());
 app.use(express.static('public'));
 
