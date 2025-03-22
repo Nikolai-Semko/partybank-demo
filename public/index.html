@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partybank - Event Ticketing Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Partybank</h1>
+            <p>Cloud Scalability Demo Application</p>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="server-info-box">
+            <h2>Server Information</h2>
+            <div id="server-info">Loading server info...</div>
+            <button id="refresh-server-info">Refresh Server Info</button>
+        </div>
+
+        <div class="stress-test-box">
+            <h2>Stress Test</h2>
+            <div>
+                <label for="stress-duration">Duration (ms):</label>
+                <input type="number" id="stress-duration" value="5000" min="1000" max="20000">
+            </div>
+            <div>
+                <label for="stress-intensity">Intensity (1-100):</label>
+                <input type="number" id="stress-intensity" value="50" min="1" max="100">
+            </div>
+            <button id="run-stress-test">Run Stress Test</button>
+            <div id="stress-result">Results will appear here</div>
+        </div>
+    </section>
+
+    <main class="container">
+        <h2>Available Events</h2>
+        <div id="events-container" class="events-grid">
+            Loading events...
+        </div>
+    </main>
+
+    <div id="purchase-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-event-name">Event Name</h2>
+            <form id="purchase-form">
+                <input type="hidden" id="event-id">
+                
+                <div class="form-group">
+                    <label for="quantity">Number of Tickets:</label>
+                    <input type="number" id="quantity" min="1" max="10" value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customer-name">Your Name:</label>
+                    <input type="text" id="customer-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <p>Total Price: $<span id="total-price">0</span></p>
+                </div>
+
+                <button type="submit" class="btn-primary">Purchase Tickets</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-confirmation">&times;</span>
+            <h2>Purchase Confirmation</h2>
+            <div id="confirmation-details"></div>
+            <button id="close-confirmation" class="btn-primary">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Partybank - Cloud Scalability Demo by Group 6</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
