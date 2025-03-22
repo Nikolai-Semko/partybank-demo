@@ -3,7 +3,7 @@
 // API base URL - change this to your deployed Azure App Service URL when deployed
 const API_BASE_URL = window.location.hostname === 'localhost' 
     ? 'http://localhost:3000/api' 
-    : 'https://YOUR-APP-NAME.azurewebsites.net/api';
+    : 'https://partybank-demo-nikolai-ehd6a8b7f4eebtcu.canadacentral-01.azurewebsites.net';
 
 // DOM elements
 const eventsContainer = document.getElementById('events-container');
