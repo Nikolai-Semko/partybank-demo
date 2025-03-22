@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - partybank-demo-Nikolai
+name: Build and deploy Node.js app to Azure Web App - partybank-demo-nikolai
 
 on:
   push:
@@ -60,15 +60,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_3F44C3A997294D85855EE308492FF315 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_72ADF0BB6D924554B94AD4C6F8D8E98D }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_25E07B19B7264419B8F54D82503D840C }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_8E088609090D431DBCC9F84EF82E63CD }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_28628B93050E491882360161AC937A68 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_0680547F55724462A6B6DBA4B0C0F623 }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'partybank-demo-Nikolai'
+          app-name: 'partybank-demo-nikolai'
           slot-name: 'Production'
           package: .
           
