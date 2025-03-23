@@ -175,6 +175,7 @@ This guide walks you through deploying the Partybank application and setting up 
    - CPU Percentage across instances
    - Response times under load
 
+#### For the web application and test to work correctly, the real URL of the deployed site must be added to the app.js and PartyBankLoadTest.jmx files.
 
 This deployment approach demonstrates horizontal scaling (adding more instances) rather than vertical scaling (increasing instance size), aligning with the cloud scalability concepts in our research work.
 
