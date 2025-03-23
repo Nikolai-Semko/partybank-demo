@@ -175,27 +175,6 @@ This guide walks you through deploying the Partybank application and setting up 
    - CPU Percentage across instances
    - Response times under load
 
-3. For your research, capture screenshots of:
-   - The scaling events in "Run history"
-   - The Instance Count graph showing scaling up and down
-   - CPU utilization before, during, and after scaling
-
-## Part 6: Analyzing Results
-
-1. After the test completes, navigate to your load test results
-2. Look at both client-side and server-side metrics:
-   - Client-side: Response times, success rates
-   - Server-side: CPU usage, instance count, memory usage
-
-3. Document the relationship between:
-   - Load intensity and CPU usage
-   - CPU usage and instance count
-   - Instance count and response times
-
-4. For your research, calculate:
-   - Time to scale up after load increases
-   - Time to scale down after load decreases
-   - Cost implications of auto-scaling vs. fixed capacity
 
 This deployment approach demonstrates horizontal scaling (adding more instances) rather than vertical scaling (increasing instance size), aligning with the cloud scalability concepts in our research work.
 
