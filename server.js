@@ -24,6 +24,20 @@ let events = [
 
 let purchases = [];
 
+// Add this before your other API routes
+app.get('/api', (req, res) => {
+  res.json({
+    message: 'Partybank API',
+    version: '1.0',
+    endpoints: [
+      '/api/events',
+      '/api/server-info',
+      '/api/stress-test',
+      '/api/purchase'
+    ]
+  });
+});
+
 // API Routes
 // Get server info - useful for demonstrating which instance is responding
 app.get('/api/server-info', (req, res) => {
