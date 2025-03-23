@@ -197,8 +197,28 @@ This guide walks you through deploying the Partybank application and setting up 
    - Time to scale down after load decreases
    - Cost implications of auto-scaling vs. fixed capacity
 
-This deployment approach demonstrates horizontal scaling (adding more instances) rather than vertical scaling (increasing instance size), aligning with the cloud scalability concepts in your research paper.
+This deployment approach demonstrates horizontal scaling (adding more instances) rather than vertical scaling (increasing instance size), aligning with the cloud scalability concepts in our research work.
 
----
+### To test a web application, you can use the following requests:
+**Method**: GET
+- **URL**: {{base_url}}/api
+- **URL**: {{base_url}}/health
+- **URL**: {{base_url}}/api/server-info
+- **URL**: {{base_url}}/api/stress-test
+- **URL**: {{base_url}}/api/stress-test?duration=1000&intensity=20
+- **URL**: {{base_url}}/api/events
+- **URL**: {{base_url}}/api/events/1
+
+**Method**: POST
+- **URL**: {{base_url}}/api/purchase
+- Body:
+```json
+{
+  "eventId": 1,
+  "quantity": 2,
+  "customerName": "John Doe",
+  "email": "john.doe@example.com"
+}
+```
 
 *Note: The Partybank web application and this Deployment Guide were developed with the assistance of Claude.ai*
